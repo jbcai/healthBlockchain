@@ -27,17 +27,18 @@ CS 198-199 Requirement 2018-2019
 ### Blockchain Setup
 1. 0_genFile.py: creates 10kB, 100kB, 1000kB files
 2. (only 1 needed) 0_genKey.py: creates 25 id-key pairs
-3. (only 1 needed) 0_makeBlockchain.py: creates a folder named blockchains. The blockchains folder has the following: 3 blockchains account, the genesis.json, and enode addresses of those accounts in a .txt file
-4. Distribute the id-key pairs and blockchains folder across 3 computers
-5. 1_startBlockchain.py: start Hospital n (please add parameter: 1,2,3)
-6. For PC1, Geth: admin.addPeer(enode of PC2 & PC3). For PC2, Geth: admin.addPeer(enode of PC3). The three computers are now all connected.
-7. Geth: personal.unlockAccount(eth.accounts[0], "123", 0)
-8. Geth: miner.start()
-9. (only 1 needed) Go to Deployment folder and do truffle migrate. This will return contract address of HealthRecordManagement
-10. Create a contractAddress.txt in the Deployment folder, and save the contract address of HealthRecordManagement there
-11. Start IPFS daemon
-100. (only 1 needed) 3_addInitBlockchain.py: create 25 empty collections with the ids
-101. 4_blockchainRandom.py: the actual 5000 random transactions in the blockchain setup of thesis
+3. (only 1 needed) Set the list host of 0_makeBlockchain.py to the ip addresses of the computers.
+4. (only 1 needed) 0_makeBlockchain.py: creates a folder named blockchains. The blockchains folder has the following: 3 blockchains account, the genesis.json, and enode addresses of those accounts in a .txt file
+5. Distribute the id-key pairs and blockchains folder across 3 computers
+6. 1_startBlockchain.py: start Hospital n (please add parameter: 1,2,3)
+7. For PC1, Geth: admin.addPeer(enode of PC2 & PC3). For PC2, Geth: admin.addPeer(enode of PC3). The three computers are now all connected.
+8. Geth: personal.unlockAccount(eth.accounts[0], "123", 0)
+9. Geth: miner.start()
+10. (only 1 needed) Go to Deployment folder and do truffle migrate. This will return contract address of HealthRecordManagement
+11. Create a contractAddress.txt in the Deployment folder, and save the contract address of HealthRecordManagement there
+12. Start IPFS daemon
+13. (only 1 needed) 3_addInitBlockchain.py: create 25 empty collections with the ids
+14. 4_blockchainRandom.py: the actual 5000 random transactions in the blockchain setup of thesis
 
 ### Baseline Setup
 1. 0_genFile.py: creates 10kB, 100kB, 1000kB files
